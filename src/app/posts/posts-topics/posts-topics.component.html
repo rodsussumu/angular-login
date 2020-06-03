@@ -1,0 +1,17 @@
+<div class="container topics-container">
+  <div class="page-title">
+    <h2>Tópicos</h2>
+    <p>Todos os tópicos cadastrados</p>
+  </div>
+
+  <div class="topic-card" *ngFor="let topic of topics" [routerLink]="'/topics/'+ topic._id">
+    <div class="topic-card__avatar">
+      <img [src]="topic.avatar" [alt]="topic.name">
+    </div>
+    <div class="topic-card__title">
+      <h4>{{topic.name}}</h4>
+      <p>{{topic.desc}}</p>
+      <app-user-info [user]="topic.owner"></app-user-info>
+    </div>
+  </div>
+</div>

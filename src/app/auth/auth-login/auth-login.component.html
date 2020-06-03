@@ -1,0 +1,26 @@
+<!-- No arquivo 'auth-login.component.html' -->
+<div class="container">
+
+  <div class="page-title">
+    <h2>Fazer login</h2>
+    <p>Entre na sua conta do fórum</p>
+  </div>
+
+  <form [formGroup]="loginForm" class="login-form">
+
+    <div class="form-group">
+      <label for="nickName">Usuário</label>
+      <input type="text" formControlName="nickName" class="form-control" id="nickName">
+      <small *ngIf="getFieldError('nickName')" class="text-danger">{{getFieldError('nickName')}}</small>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Senha</label>
+      <input type="password" formControlName="password" class="form-control" id="password">
+      <small *ngIf="getFieldError('password')" class="text-danger">{{getFieldError('password')}}</small>
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="sendLogin()">Entrar</button>
+
+  </form>
+</div>
