@@ -1,4 +1,4 @@
-@mixin text-style($size:14px, $weight: normal, $color){
+@mixin text-style($size:14px, $weight: normal, $color:blue){
   color: $color;
   font-size: $size;
   font-weight: $weight;
